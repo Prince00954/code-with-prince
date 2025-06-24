@@ -1,0 +1,91 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNnQfljvtjnCnYSjhGMf9Vl",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Prince00954/code-with-prince/blob/main/challenge%20questions\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H6EmWtAFHEvI",
+        "outputId": "1c4d5d3a-bd9c-476d-ff6e-8d584670f955"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original list: ['Ram', 1, 'Shyam', 2, 'Aman', 3]\n",
+            "Sorted list (numbers first, then strings): [1, 2, 3, 'Aman', 'Ram', 'Shyam']\n"
+          ]
+        }
+      ],
+      "source": [
+        "L = [\"Ram\", 1, \"Shyam\", 2, \"Aman\", 3]\n",
+        "\n",
+        "# Separate strings and numbers\n",
+        "strings = sorted([x for x in L if isinstance(x, str)])\n",
+        "numbers = sorted([x for x in L if isinstance(x, int)])\n",
+        "\n",
+        "# Combine them (you can also choose to sort differently)\n",
+        "sorted_list = numbers + strings\n",
+        "\n",
+        "print(\"Original list:\", L)\n",
+        "print(\"Sorted list (numbers first, then strings):\", sorted_list)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "L = [\"Ram\", 1, \"Shyam\", 2, \"Aman\", 3]\n",
+        "L_str = sorted(L, key=lambda x: str(x))\n",
+        "\n",
+        "print(\"Sorted list (all as strings):\", L_str)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UIEYkp05HOEm",
+        "outputId": "b285f25b-bfed-41bd-d8e4-df79ba4b67d7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sorted list (all as strings): [1, 2, 3, 'Aman', 'Ram', 'Shyam']\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
